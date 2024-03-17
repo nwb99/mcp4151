@@ -46,6 +46,21 @@ MCP4151::MCP4151(const int& CS, const int& MOSI, const int& MISO, const int& SCK
     digitalWrite(MOSIpin, LOW);
 }
 
+MCP4151::MCP4151(const int& CS) {
+    CSpin = CS;
+    MOSIpin = MOSI;
+    MISOpin = MISO;
+    SCKpin = SCK;
+    speedW = MAX_SPEED_WRITE; // 4 MHz
+    speedR = MAX_SPEED_READ;  // 250 kHz
+    spimode = SPI_MODE0;
+    pinMode(CSpin, OUTPUT);
+    pinMode(MOSIpin, OUTPUT);
+    pinMode(MISOpin, INPUT_PULLUP);
+    pinMode(SCKpin, OUTPUT);
+    digitalWrite(MOSIpin, LOW);
+}
+
 void MCP4151::writeValue(const int& value) {
     SPI.beginTransaction(SPISettings(speedW, MSBFIRST, spimode));
     digitalWrite(CSpin, LOW);
