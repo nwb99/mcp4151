@@ -17,6 +17,8 @@ public:
 
     MCP4151(const int& CS, const int& MOSI, const int& MISO, const int& SCK);
 
+    MCP4151(const int& CS;
+
     void writeValue(const int& value);
     int getCurValue();
 
