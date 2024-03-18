@@ -1,4 +1,4 @@
 MCP4151	KEYWORD1
 
-writeVolume	KEYWORD2
-getCurVolume	KEYWORD2
+writeValue	KEYWORD2
+getCurValue	KEYWORD2
