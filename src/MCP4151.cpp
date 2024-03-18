@@ -1,8 +1,9 @@
 /*
  * MCP4151 Library for Arduino
- * v1.0
+ * v1.0.1
  * MIT License
  * (c) 2022 Nathan "nwb99" Barnett
+ * mofify UA6EM
  */
 
 #include <Arduino.h>
