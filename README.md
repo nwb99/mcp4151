@@ -15,6 +15,12 @@ There's another constructor that accepts more parameters if one needs more custo
 
 Import it into your project with `#include <MCP4151.h>`.  
 
+## How to install
+!![Alt text](https://github.com/UA6EM/MCP4151/blob/mpgsp/DOC/mcp41x1_install.jpeg)
+
+![Alt text](https://github.com/UA6EM/MCP4151/blob/mpgsp/DOC/mcp41x1_spi.jpeg)
+
+
 ---
 
 ## Available functions
