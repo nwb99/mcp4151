@@ -10,7 +10,7 @@
 #include <MCP4151.h>
 #include <SPI.h>
 
-#define MAX_SPEED_WRITE  4000000
+#define MAX_SPEED_WRITE  250000
 #define MAX_SPEED_READ   250000
 
 MCP4151::MCP4151(const int& CS, const int& MOSI, const int& MISO, const int& SCK, 
@@ -37,7 +37,7 @@ MCP4151::MCP4151(const int& CS, const int& MOSI, const int& MISO, const int& SCK
     MOSIpin = MOSI;
     MISOpin = MISO;
     SCKpin = SCK;
-    speedW = MAX_SPEED_WRITE; // 4 MHz
+    speedW = MAX_SPEED_WRITE; // 250 kHz
     speedR = MAX_SPEED_READ;  // 250 kHz
     spimode = SPI_MODE0;
     pinMode(CSpin, OUTPUT);
@@ -52,7 +52,7 @@ MCP4151::MCP4151(const int& CS) {
     MOSIpin = MOSI;
     MISOpin = MISO;
     SCKpin = SCK;
-    speedW = MAX_SPEED_WRITE; // 4 MHz
+    speedW = MAX_SPEED_WRITE; // 250 kHz
     speedR = MAX_SPEED_READ;  // 250 kHz
     spimode = SPI_MODE0;
     pinMode(CSpin, OUTPUT);
