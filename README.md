@@ -4,13 +4,13 @@
 
 ## How to use
 
-Create an instance of it, like `MCP4151 pot(CS, MOSI, MISO, SCK)`.  
+Create an instance of it, like MCP4151 pot(CS, MOSI, MISO, SCK); 
 OR
 
-    MCP4151(CS, MOSI, MISO, SCK, maxSpeedRead, maxSpeedWrite, SPIMode);
+    MCP4151 pot(CS, MOSI, MISO, SCK, maxSpeedRead, maxSpeedWrite, SPIMode);
 OR 
 
-Create an instance of it, like `MCP4151 pot(CS)`.  
+Create an instance of it, like MCP4151 pot(CS);
 
 Where CS is chip select pin, MOSI is the output on the Arduino, MISO is the input, and SCK is the clock.  
 On the MCP4151, the MISO and MOSI are on the same pin. Use a 1 kOhm resistor to pull down the MISO pin  
