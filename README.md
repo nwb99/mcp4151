@@ -5,6 +5,8 @@
 ## How to use
 
 Create an instance of it, like `MCP4151 pot(CS, MOSI, MISO, SCK)`.  
+OR
+    MCP4151(CS, MOSI, MISO, SCK, maxSpeedRead, maxSpeedWrite, SPIMode);
 OR 
 Create an instance of it, like `MCP4151 pot(CS)`.  
 
