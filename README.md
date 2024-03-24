@@ -4,7 +4,7 @@
 
 ## How to use
 
-Create an instance of it, like MCP4151 pot(CS, MOSI, MISO, SCK); 
+Create an instance of it, like     MCP4151 pot(CS, MOSI, MISO, SCK); 
 
 OR
 
