@@ -1,15 +1,16 @@
 /*
  * MCP4151 Library for Arduino
- * v1.0
+ * v1.0.1
  * MIT License
  * (c) 2022 Nathan "nwb99" Barnett
+ * mofify UA6EM
  */
 
 #include <Arduino.h>
 #include <MCP4151.h>
 #include <SPI.h>
 
-#define MAX_SPEED_WRITE  4000000
+#define MAX_SPEED_WRITE  250000
 #define MAX_SPEED_READ   250000
 
 MCP4151::MCP4151(const int& CS, const int& MOSI, const int& MISO, const int& SCK, 
@@ -36,7 +37,22 @@ MCP4151::MCP4151(const int& CS, const int& MOSI, const int& MISO, const int& SCK
     MOSIpin = MOSI;
     MISOpin = MISO;
     SCKpin = SCK;
-    speedW = MAX_SPEED_WRITE; // 4 MHz
+    speedW = MAX_SPEED_WRITE; // 250 kHz
+    speedR = MAX_SPEED_READ;  // 250 kHz
+    spimode = SPI_MODE0;
+    pinMode(CSpin, OUTPUT);
+    pinMode(MOSIpin, OUTPUT);
+    pinMode(MISOpin, INPUT_PULLUP);
+    pinMode(SCKpin, OUTPUT);
+    digitalWrite(MOSIpin, LOW);
+}
+
+MCP4151::MCP4151(const int& CS) {
+    CSpin = CS;
+    MOSIpin = MOSI;
+    MISOpin = MISO;
+    SCKpin = SCK;
+    speedW = MAX_SPEED_WRITE; // 250 kHz
     speedR = MAX_SPEED_READ;  // 250 kHz
     spimode = SPI_MODE0;
     pinMode(CSpin, OUTPUT);

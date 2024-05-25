@@ -4,13 +4,27 @@
 
 ## How to use
 
-Create an instance of it, like `MCP4151 pot(CS, MOSI, MISO, SCK)`.  
+Create an instance of it, like     MCP4151 pot(CS, MOSI, MISO, SCK); 
+
+OR
+
+    MCP4151 pot(CS, MOSI, MISO, SCK, maxSpeedRead, maxSpeedWrite, SPIMode);
+OR 
+
+    MCP4151 pot(CS);
+
 Where CS is chip select pin, MOSI is the output on the Arduino, MISO is the input, and SCK is the clock.  
 On the MCP4151, the MISO and MOSI are on the same pin. Use a 1 kOhm resistor to pull down the MISO pin  
 on the chip to GND, with the MOSI line (on the MOSI pin of the Arduino) in series with the resistor.
 There's another constructor that accepts more parameters if one needs more customization.  
 
 Import it into your project with `#include <MCP4151.h>`.  
+
+## How to install
+!![Alt text](https://github.com/UA6EM/MCP4151/blob/mpgsp/DOC/mcp41x1_install.jpeg)
+
+![Alt text](https://github.com/UA6EM/MCP4151/blob/mpgsp/DOC/mcp41x1_spi.jpeg)
+
 
 ---
 

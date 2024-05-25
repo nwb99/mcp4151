@@ -1,8 +1,9 @@
 /*
  * MCP4151 Library for Arduino
- * v1.0
+ * v1.0.1
  * MIT License
  * (c) 2022 Nathan "nwb99" Barnett
+ * modify UA6EM 2024
  */
 
 #ifndef MCP4151_H
@@ -16,6 +17,8 @@ public:
                 const uint8_t& SPIMode);
 
     MCP4151(const int& CS, const int& MOSI, const int& MISO, const int& SCK);
+
+    MCP4151(const int& CS);
 
     void writeValue(const int& value);
     int getCurValue();
